@@ -118,7 +118,7 @@ const Header = () => {
               <Typography
                 variant="h5"
                 style={{
-                  fontFamily: "Titillium Web",
+                  fontFamily: `Titillium Web, Arial, Helvetica, sans-serif`,
                   fontWeight: 700,
                   padding: "20px 0px 20px 50px",
                 }}

@@ -14,7 +14,7 @@ export const Theme = createMuiTheme({
   },
   typography: {
     h1: {
-      fontFamily: "Montserrat",
+      fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
       fontSize: "3.5rem",
       "@media (min-width:600px)": {
         fontSize: "3.0rem",
@@ -24,7 +24,7 @@ export const Theme = createMuiTheme({
       },
     },
     h2: {
-      fontFamily: "Montserrat",
+      fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
       fontSize: "1.5rem",
       "@media (min-width:600px)": {
         fontSize: "1.5rem",
@@ -39,7 +39,6 @@ export const Theme = createMuiTheme({
       "Montserrat",
       "Titillium Web",
       "Roboto",
-      '"Helvetica Neue"',
       "Arial",
       "sans-serif",
       '"Apple Color Emoji"',
