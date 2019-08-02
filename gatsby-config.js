@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Patrik Molnar · Portfolio`,
-    titleTemplate: "%s · Portfolio",
+    title: `Portfolio · Patrik Molnar`,
+    titleTemplate: "%s · Patrik Molnar",
     description: `A website for my portfolio`,
     siteUrl: "https://patrikmolnar-portfolio.netlify.com",
   },
