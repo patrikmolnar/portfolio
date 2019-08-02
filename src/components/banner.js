@@ -51,14 +51,25 @@ const Banner = ({ social }) => {
               component="h1"
               style={{ textAlign: "left", padding: "0px 50px" }}
             >
-              I'm Patrik Molnar
+              I'm{" "}
+              <Typography
+                variant="h1"
+                component="span"
+                style={{ fontWeight: 700 }}
+              >
+                Patrik Molnar
+              </Typography>
             </Typography>
             <Typography
               variant="h1"
               component="h1"
               style={{ textAlign: "left", padding: "0px 50px" }}
             >
-              a <span style={{ color: "#2D9CDB" }}>full-stack</span> developer
+              a{" "}
+              <span style={{ color: "#2D9CDB", fontWeight: 700 }}>
+                full-stack
+              </span>{" "}
+              developer
             </Typography>
             <Typography
               variant="h2"
