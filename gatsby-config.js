@@ -8,11 +8,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ["Montserrat", "Roboto", "Titillium Web"],
-        },
+        fonts: [
+          {
+            family: `Montserrat`,
+          },
+          {
+            family: `Roboto`,
+          },
+          {
+            family: `Titillium Web`,
+            variants: [`700`],
+          },
+        ],
       },
     },
     {
