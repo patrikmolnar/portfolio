@@ -58,10 +58,10 @@ const useStyles = makeStyles(theme =>
   })
 )
 
-const Header = () => {
+const Header = ({ pageContext }) => {
   const classes = useStyles()
   const [state, setState] = useState({
-    top: false,
+    bottom: false,
   })
 
   const toggleDrawer = (side, open) => event => {
@@ -90,28 +90,30 @@ const Header = () => {
       >
         Home
       </Link>
-      <Link
+      {/* <Link
         style={{ borderBottom: "1px solid #d4d4d4" }}
         to={`blog`}
         className={classes.link}
         aria-label="Blog"
       >
         Blog
-      </Link>
-      <Link
-        style={{ borderBottom: "1px solid #d4d4d4" }}
-        to={``}
-        className={classes.link}
+      </Link> */}
+      <a
         aria-label="Resume"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={pageContext.portfolio.resumeUrl}
+        className={classes.link}
+        style={{ borderBottom: "1px solid #d4d4d4" }}
       >
         Resume
-      </Link>
+      </a>
     </Grid>
   )
 
   return (
     <div className={classes.grow}>
-      <AppBar elevation={0} position="static" color="#fff">
+      <AppBar elevation={0} position="static" color="primary">
         <Toolbar style={{ padding: 8 }}>
           <Grid container justify="flex-start">
             <Link style={{ color: "#000000", textDecoration: "none" }} to={`/`}>
@@ -130,30 +132,41 @@ const Header = () => {
 
           <div className={classes.grow} />
           <Grid container justify="flex-end" className={classes.sectionDesktop}>
-            <Link aria-label="Home" to={`/`} className={classes.link}>
+            <Link
+              onClick={toggleDrawer("bottom", false)}
+              aria-label="Home"
+              to={`/`}
+              className={classes.link}
+            >
               Home
             </Link>
-            <Link aria-label="Blog" to={`blog`} className={classes.link}>
+            {/* <Link aria-label="Blog" to={`blog`} className={classes.link}>
               Blog
-            </Link>
-            <Link aria-label="Resume" to={``} className={classes.link}>
+            </Link> */}
+            <a
+              aria-label="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={pageContext.portfolio.resumeUrl}
+              className={classes.link}
+            >
               Resume
-            </Link>
+            </a>
           </Grid>
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="Expand menu"
-              onClick={toggleDrawer("top", true)}
+              onClick={toggleDrawer("bottom", true)}
             >
               <MenuIcon style={{ color: "#000", fontSize: 35 }} />
             </IconButton>
           </div>
           <Drawer
-            anchor="top"
-            open={state.top}
-            onClose={toggleDrawer("top", false)}
+            anchor="bottom"
+            open={state.bottom}
+            onClose={toggleDrawer("bottom", false)}
           >
-            {fullList("top")}
+            {fullList("bottom")}
           </Drawer>
         </Toolbar>
       </AppBar>
