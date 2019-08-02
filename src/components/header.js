@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme =>
   })
 )
 
-const Header = ({ pageContext }) => {
+const Header = () => {
   const classes = useStyles()
   const [state, setState] = useState({
     bottom: false,
@@ -90,19 +90,11 @@ const Header = ({ pageContext }) => {
       >
         Home
       </Link>
-      {/* <Link
-        style={{ borderBottom: "1px solid #d4d4d4" }}
-        to={`blog`}
-        className={classes.link}
-        aria-label="Blog"
-      >
-        Blog
-      </Link> */}
       <a
         aria-label="Resume"
         target="_blank"
         rel="noopener noreferrer"
-        href={pageContext.portfolio.resumeUrl}
+        href="https://s3-ap-southeast-1.amazonaws.com/patrikmolnar.com/resume/Patrik+Molnar_CV.pdf"
         className={classes.link}
         style={{ borderBottom: "1px solid #d4d4d4" }}
       >
@@ -111,82 +103,64 @@ const Header = ({ pageContext }) => {
     </Grid>
   )
 
-  try {
-    let resumeUrl =
-      pageContext && pageContext.portfolio
-        ? pageContext.portfolio.resumeUrl
-        : "https://s3-ap-southeast-1.amazonaws.com/patrikmolnar.com/resume/Patrik+Molnar_CV.pdf"
-    return (
-      <div className={classes.grow}>
-        <AppBar elevation={0} position="static" color="primary">
-          <Toolbar style={{ padding: 8 }}>
-            <Grid container justify="flex-start">
-              <Link
-                style={{ color: "#000000", textDecoration: "none" }}
-                to={`/`}
+  return (
+    <div className={classes.grow}>
+      <AppBar elevation={0} position="static" color="primary">
+        <Toolbar style={{ padding: 8 }}>
+          <Grid container justify="flex-start">
+            <Link style={{ color: "#000000", textDecoration: "none" }} to={`/`}>
+              <Typography
+                variant="h5"
+                style={{
+                  fontFamily: `Titillium Web, Arial, Helvetica, sans-serif`,
+                  fontWeight: 700,
+                  padding: "20px 0px 20px 50px",
+                }}
               >
-                <Typography
-                  variant="h5"
-                  style={{
-                    fontFamily: `Titillium Web, Arial, Helvetica, sans-serif`,
-                    fontWeight: 700,
-                    padding: "20px 0px 20px 50px",
-                  }}
-                >
-                  Patrik Molnar
-                </Typography>
-              </Link>
-            </Grid>
+                Patrik Molnar
+              </Typography>
+            </Link>
+          </Grid>
 
-            <div className={classes.grow} />
-            <Grid
-              container
-              justify="flex-end"
-              className={classes.sectionDesktop}
+          <div className={classes.grow} />
+          <Grid container justify="flex-end" className={classes.sectionDesktop}>
+            <Link
+              onClick={toggleDrawer("bottom", false)}
+              aria-label="Home"
+              to={`/`}
+              className={classes.link}
             >
-              <Link
-                onClick={toggleDrawer("bottom", false)}
-                aria-label="Home"
-                to={`/`}
-                className={classes.link}
-              >
-                Home
-              </Link>
-              {/* <Link aria-label="Blog" to={`blog`} className={classes.link}>
-                Blog
-              </Link> */}
-              <a
-                aria-label="Resume"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={resumeUrl}
-                className={classes.link}
-              >
-                Resume
-              </a>
-            </Grid>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="Expand menu"
-                onClick={toggleDrawer("bottom", true)}
-              >
-                <MenuIcon style={{ color: "#000", fontSize: 35 }} />
-              </IconButton>
-            </div>
-            <Drawer
-              anchor="bottom"
-              open={state.bottom}
-              onClose={toggleDrawer("bottom", false)}
+              Home
+            </Link>
+            <a
+              aria-label="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://s3-ap-southeast-1.amazonaws.com/patrikmolnar.com/resume/Patrik+Molnar_CV.pdf"
+              className={classes.link}
             >
-              {fullList("bottom")}
-            </Drawer>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  } catch (error) {
-    console.log(error)
-  }
+              Resume
+            </a>
+          </Grid>
+          <div className={classes.sectionMobile}>
+            <IconButton
+              aria-label="Expand menu"
+              onClick={toggleDrawer("bottom", true)}
+            >
+              <MenuIcon style={{ color: "#000", fontSize: 35 }} />
+            </IconButton>
+          </div>
+          <Drawer
+            anchor="bottom"
+            open={state.bottom}
+            onClose={toggleDrawer("bottom", false)}
+          >
+            {fullList("bottom")}
+          </Drawer>
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
 }
 
 export default Header
