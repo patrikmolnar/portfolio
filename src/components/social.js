@@ -10,13 +10,23 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons"
 const Social = () => (
   <>
     <a
-      style={{ textDecoration: "none", color: "#7647A2" }}
+      style={{
+        textDecoration: "none",
+        color: "#7647A2",
+        width: "40px",
+        height: "40px",
+      }}
       href="https://github.com/patrikmolnar"
       target="_blank"
       rel="noopener noreferrer"
     >
       <FontAwesomeIcon
-        style={{ fontSize: 40, padding: "0px 10px 10px 50px", opacity: "0.8" }}
+        style={{
+          width: "40px",
+          height: "40px",
+          padding: "0px 2px 10px 50px",
+          opacity: "0.8",
+        }}
         icon={faGithubSquare}
       />
     </a>
@@ -27,7 +37,12 @@ const Social = () => (
       rel="noopener noreferrer"
     >
       <FontAwesomeIcon
-        style={{ fontSize: 40, padding: "0px 10px 10px 0px", opacity: "0.8" }}
+        style={{
+          width: "40px",
+          height: "40px",
+          padding: "0px 2px 10px 0px",
+          opacity: "0.8",
+        }}
         icon={faLinkedin}
       />
     </a>
@@ -36,7 +51,12 @@ const Social = () => (
       style={{ textDecoration: "none", color: "#EB5757" }}
     >
       <FontAwesomeIcon
-        style={{ fontSize: 40, padding: "0px 10px 10px 0px", opacity: "0.8" }}
+        style={{
+          width: "40px",
+          height: "40px",
+          padding: "0px 2px 10px 0px",
+          opacity: "0.8",
+        }}
         icon={faEnvelopeSquare}
       />
     </a>
@@ -47,7 +67,12 @@ const Social = () => (
       rel="noopener noreferrer"
     >
       <FontAwesomeIcon
-        style={{ fontSize: 40, padding: "0px 10px 10px 0px", opacity: "0.8" }}
+        style={{
+          width: "40px",
+          height: "40px",
+          padding: "0px 2px 10px 0px",
+          opacity: "0.8",
+        }}
         icon={faTwitterSquare}
       />
     </a>
