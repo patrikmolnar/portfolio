@@ -117,7 +117,11 @@ const Header = () => {
             <Link style={{ color: "#000000", textDecoration: "none" }} to={`/`}>
               <Typography
                 variant="h5"
-                style={{ fontWeight: "bold", padding: "20px 0px 20px 50px" }}
+                style={{
+                  fontFamily: "Titillium Web",
+                  fontWeight: 900,
+                  padding: "20px 0px 20px 50px",
+                }}
               >
                 Patrik Molnar
               </Typography>

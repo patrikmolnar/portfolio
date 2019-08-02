@@ -58,11 +58,7 @@ const Banner = ({ social }) => {
               component="h1"
               style={{ textAlign: "left", padding: "0px 50px" }}
             >
-              a{" "}
-              <span style={{ color: "#2D9CDB" }}>
-                <strong>full-stack</strong>
-              </span>{" "}
-              developer
+              a <span style={{ color: "#2D9CDB" }}>full-stack</span> developer
             </Typography>
             <Typography
               variant="h2"
