@@ -19,6 +19,7 @@ const Social = () => (
       href="https://github.com/patrikmolnar"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="GitHub"
     >
       <FontAwesomeIcon
         style={{
@@ -35,6 +36,7 @@ const Social = () => (
       href="https://www.linkedin.com/in/patrikmolnar/"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="LinkedIn"
     >
       <FontAwesomeIcon
         style={{
@@ -49,6 +51,7 @@ const Social = () => (
     <a
       href="mailto:info@patrikmolnar.com"
       style={{ textDecoration: "none", color: "#EB5757" }}
+      aria-label="Mail"
     >
       <FontAwesomeIcon
         style={{
@@ -65,6 +68,7 @@ const Social = () => (
       href="https://twitter.com/Packiraly"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Twitter"
     >
       <FontAwesomeIcon
         style={{
