@@ -60,7 +60,7 @@ const useStyles = makeStyles(theme =>
 const Header = () => {
   const classes = useStyles()
   const [state, setState] = useState({
-    bottom: false,
+    top: false,
   })
 
   const toggleDrawer = (side, open) => event => {
@@ -144,17 +144,17 @@ const Header = () => {
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="Expand menu"
-              onClick={toggleDrawer("bottom", true)}
+              onClick={toggleDrawer("top", true)}
             >
               <MenuIcon style={{ color: "#000", fontSize: 35 }} />
             </IconButton>
           </div>
           <Drawer
-            anchor="bottom"
-            open={state.bottom}
-            onClose={toggleDrawer("bottom", false)}
+            anchor="top"
+            open={state.top}
+            onClose={toggleDrawer("top", false)}
           >
-            {fullList("bottom")}
+            {fullList("top")}
           </Drawer>
         </Toolbar>
       </AppBar>
