@@ -20,7 +20,7 @@ const Footer = () => {
               variant="body1"
             >
               <span role="img" aria-label="heart">
-                built with ❤️ by Patrik Molnar
+                built with ❤️
               </span>
             </Typography>
           </Grid>

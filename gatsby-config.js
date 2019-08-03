@@ -24,6 +24,24 @@ module.exports = {
         ],
       },
     },
+    // disable until blogs are up
+    // {
+    //   resolve: "gatsby-plugin-page-progress",
+    //   options: {
+    //     includePaths: ["/"],
+    //     //excludePaths: ['/blog/beep-beep-lettuce'],
+    //     height: 3,
+    //     prependToBody: false,
+    //     color: `#2D9CDB`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#2D9CDB`,
+        showSpinner: false,
+      },
+    },
     {
       resolve: "gatsby-source-graphql",
       options: {
