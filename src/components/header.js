@@ -33,7 +33,6 @@ const useStyles = makeStyles(theme =>
       },
     },
     link: {
-      // color: "#a6026a",
       color: "#000",
       textDecoration: "none",
       padding: 20,
@@ -94,7 +93,7 @@ const Header = () => {
         aria-label="Resume"
         target="_blank"
         rel="noopener noreferrer"
-        href="https://s3-ap-southeast-1.amazonaws.com/patrikmolnar.com/resume/Patrik+Molnar_CV.pdf"
+        href="PatrikMolnar_CV.pdf"
         className={classes.link}
         style={{ borderBottom: "1px solid #d4d4d4" }}
       >
@@ -136,7 +135,7 @@ const Header = () => {
               aria-label="Resume"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://s3-ap-southeast-1.amazonaws.com/patrikmolnar.com/resume/Patrik+Molnar_CV.pdf"
+              href="PatrikMolnar_CV.pdf"
               className={classes.link}
             >
               Resume
