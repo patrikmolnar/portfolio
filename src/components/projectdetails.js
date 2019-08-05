@@ -30,7 +30,11 @@ const ProjectDetails = ({ project }) => {
       <Grid
         style={{ padding: "40px 40px 0px 40px", textAlign: "center" }}
         item
-        xs
+        xs={12}
+        sm={12}
+        md={12}
+        lg={6}
+        xl={6}
       >
         <ImageZoom
           image={{
@@ -71,7 +75,15 @@ const ProjectDetails = ({ project }) => {
           )}
         </Grid>
       </Grid>
-      <Grid style={{ padding: "0px 40px 40px 40px" }} item xs>
+      <Grid
+        style={{ padding: "0px 40px 40px 40px" }}
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={6}
+        xl={6}
+      >
         <Typography
           style={{ color: "#2d9cdb", fontWeight: "bold" }}
           variant="h4"
