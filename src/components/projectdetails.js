@@ -27,7 +27,11 @@ const ProjectDetails = ({ project }) => {
   console.log(project)
   return (
     <>
-      <Grid style={{ padding: 20, textAlign: "center" }} item xs>
+      <Grid
+        style={{ padding: "40px 40px 0px 40px", textAlign: "center" }}
+        item
+        xs
+      >
         <ImageZoom
           image={{
             alt: "thumbnail",
@@ -44,6 +48,7 @@ const ProjectDetails = ({ project }) => {
           <Button
             target="_blank"
             rel="noopener noreferrer"
+            style={{ color: "#2d9cdb", fontWeight: "bold" }}
             href={project.demoUrl}
           >
             Demo
@@ -56,6 +61,7 @@ const ProjectDetails = ({ project }) => {
             </Tooltip>
           ) : (
             <Button
+              style={{ color: "#2d9cdb", fontWeight: "bold" }}
               target="_blank"
               rel="noopener noreferrer"
               href={project.sourceUrl}

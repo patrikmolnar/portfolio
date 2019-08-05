@@ -111,13 +111,13 @@ const Header = () => {
               <Typography
                 variant="h5"
                 style={{
-                  fontFamily: `Titillium Web, Arial, Helvetica, sans-serif`,
+                  fontFamily: `Montserrat, Arial, Helvetica, sans-serif`,
                   fontWeight: 700,
                   fontSize: "1.5rem",
                   padding: "20px 0px 20px 50px",
                 }}
               >
-                Patrik Molnar
+                PATRIK MOLNAR
               </Typography>
             </Link>
           </Grid>
