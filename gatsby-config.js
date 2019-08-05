@@ -15,6 +15,9 @@ module.exports = {
             family: `Montserrat`,
           },
           {
+            family: `Merriweather`,
+          },
+          {
             family: `Roboto`,
           },
           {
@@ -27,8 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-progress",
       options: {
-        includePaths: ["/"],
-        //excludePaths: ['/blog/beep-beep-lettuce'],
+        includePaths: ["/", "/project/gatsby-theme"],
         height: 3,
         prependToBody: false,
         color: `#2D9CDB`,

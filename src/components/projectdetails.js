@@ -3,6 +3,7 @@ import { Grid, Typography, Button, Tooltip, Divider } from "@material-ui/core"
 import { makeStyles, createStyles } from "@material-ui/core/styles"
 import TechStack from "./techstack"
 import ImageZoom from "react-medium-image-zoom"
+import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme =>
   createStyles({
@@ -98,8 +99,10 @@ const ProjectDetails = ({ project }) => {
         </Typography>
         <br />
         <Typography variant="h5" component="h5">
-          {project.difficulties}
+          {project.role}
+          <Link to={`/project/${project.slug}`}>Learn more</Link>
         </Typography>
+
         <br />
         {project.techStack.map((tech, index) => (
           <TechStack key={index} tech={tech} />
