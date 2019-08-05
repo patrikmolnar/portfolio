@@ -20,7 +20,20 @@ const Footer = () => {
               variant="body1"
             >
               <span role="img" aria-label="heart">
-                built with ❤️
+                © 2019, Built with{" "}
+                <a
+                  style={{ textDecoration: "none " }}
+                  href="https://www.gatsbyjs.org"
+                >
+                  Gatsby
+                </a>{" "}
+                &{" "}
+                <a
+                  style={{ textDecoration: "none " }}
+                  href="https://graphcms.com/"
+                >
+                  GraphCMS
+                </a>
               </span>
             </Typography>
           </Grid>

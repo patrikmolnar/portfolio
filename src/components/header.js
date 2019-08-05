@@ -113,6 +113,7 @@ const Header = () => {
                 style={{
                   fontFamily: `Titillium Web, Arial, Helvetica, sans-serif`,
                   fontWeight: 700,
+                  fontSize: "1.5rem",
                   padding: "20px 0px 20px 50px",
                 }}
               >

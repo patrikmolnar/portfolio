@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Grid } from "@material-ui/core"
+import { Typography, Grid, Divider } from "@material-ui/core"
 import ProjectDetails from "./projectdetails"
 
 const Projects = ({ pageContext }) => {
@@ -7,7 +7,13 @@ const Projects = ({ pageContext }) => {
     console.log(pageContext)
     return (
       <>
-        <Grid container direction="row" justify="center" alignItems="center">
+        <Grid
+          style={{ padding: "0px 0px 50px 0px" }}
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
           <Typography variant="h3" component="h3">
             Projects
           </Typography>

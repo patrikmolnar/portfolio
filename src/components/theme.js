@@ -45,6 +45,16 @@ export const Theme = createMuiTheme({
         fontSize: "2rem",
       },
     },
+    h5: {
+      fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
+      fontSize: "1rem",
+      "@media (min-width:600px)": {
+        fontSize: "1.2rem",
+      },
+      "@media (max-width:600px)": {
+        fontSize: "1rem",
+      },
+    },
     fontFamily: [
       "Montserrat",
       "Titillium Web",
