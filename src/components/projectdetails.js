@@ -9,7 +9,8 @@ const useStyles = makeStyles(theme =>
     imageCard: {
       borderRadius: 12,
       objectFit: "contain",
-      maxHeight: "300px",
+      flex: 1,
+      width: "100%",
       boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
       transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
       "&:hover": {
