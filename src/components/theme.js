@@ -49,10 +49,10 @@ export const Theme = createMuiTheme({
       fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
       fontSize: "1.5rem",
       "@media (min-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.8rem",
       },
       "@media (max-width:600px)": {
-        fontSize: "0.9rem",
+        fontSize: "1.5rem",
       },
     },
     h5: {
