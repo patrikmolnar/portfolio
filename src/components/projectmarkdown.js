@@ -1,7 +1,8 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import { Grid } from "@material-ui/core"
+import { Grid, Container } from "@material-ui/core"
 import ProjectHeader from "./projectheader"
+import "github-markdown-css"
 
 const ProjectMarkdown = ({
   content,
@@ -25,9 +26,9 @@ const ProjectMarkdown = ({
       alignItems="center"
       container
     >
-      <article>
+      <Container className="markdown-body" maxWidth="md">
         <ReactMarkdown escapeHtml={false} source={content} />
-      </article>
+      </Container>
     </Grid>
   </>
 )
