@@ -34,9 +34,10 @@ const ProjectDetails = ({ project }) => {
           <CardMedia
             component="img"
             alt={project.title}
-            height="140"
+            height="240"
             image={project.thumbnail.url}
             title={project.title}
+            className={classes.cardImage}
           />
           <CardContent>
             <div style={{ padding: "20px 20px 0px 20px" }}>
@@ -51,7 +52,7 @@ const ProjectDetails = ({ project }) => {
               >
                 {project.role}
               </Typography>
-              <div style={{ paddingTop: 15 }}>
+              {/* <div style={{ paddingTop: 15 }}>
                 {project.techStack.map((tech, index) => (
                   <TechStack key={index} tech={tech} />
                 ))}
@@ -83,9 +84,9 @@ const ProjectDetails = ({ project }) => {
                     Code
                   </Button>
                 )}
-              </div>
+              </div> */}
               <Grid
-                style={{ paddingTop: 15 }}
+                style={{ paddingTop: 25 }}
                 container
                 justify="center"
                 alignItems="center"
