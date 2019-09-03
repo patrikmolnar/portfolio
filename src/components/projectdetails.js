@@ -1,12 +1,24 @@
 import React from "react"
-import { Grid, Typography, Button, Tooltip, Divider } from "@material-ui/core"
+import {
+  Grid,
+  Typography,
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+} from "@material-ui/core"
 import { makeStyles, createStyles } from "@material-ui/core/styles"
 import TechStack from "./techstack"
-import ImageZoom from "react-medium-image-zoom"
 import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme =>
   createStyles({
+    card: {
+      height: "100%",
+      width: "100%",
+    },
     imageCard: {
       borderRadius: 12,
       objectFit: "contain",
@@ -29,7 +41,41 @@ const ProjectDetails = ({ project }) => {
   console.log(project)
   return (
     <>
-      <Grid
+      <Grid style={{ padding: 20 }} item xs={12} sm={12} md={12} lg={6} xl={6}>
+        <Card className={classes.card}>
+          <CardMedia
+            component="img"
+            alt={project.title}
+            height="140"
+            image={project.thumbnail.url}
+            title={project.title}
+          />
+          <CardContent>
+            <div style={{ padding: "20px 20px 0px 20px" }}>
+              <Typography gutterBottom variant="h5" component="h2">
+                {project.title}
+              </Typography>
+              <Typography
+                style={{ lineHeight: "25px" }}
+                variant="body2"
+                color="textSecondary"
+                component="p"
+              >
+                {project.description}
+              </Typography>
+              <div style={{ paddingTop: 15 }}>
+                {project.techStack.map((tech, index) => (
+                  <TechStack key={index} tech={tech} />
+                ))}
+              </div>
+              <Button style={{ marginTop: 20 }} color="secondary">
+                Read more
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </Grid>
+      {/* <Grid
         style={{ padding: "40px 40px 0px 40px", textAlign: "center" }}
         item
         xs={12}
@@ -110,7 +156,7 @@ const ProjectDetails = ({ project }) => {
       </Grid>
       <Grid style={{ padding: 50 }} container direction="column">
         <Divider variant="middle" />
-      </Grid>
+      </Grid> */}
     </>
   )
 }

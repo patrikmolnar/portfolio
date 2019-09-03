@@ -1,6 +1,9 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 
 export const Theme = createMuiTheme({
+  body: {
+    margin: 0,
+  },
   palette: {
     primary: {
       main: "#ffffff",
@@ -14,25 +17,31 @@ export const Theme = createMuiTheme({
   },
   typography: {
     h1: {
+      lineHeight: "60px",
       fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
       fontSize: "3.5rem",
       "@media (min-width:600px)": {
         fontSize: "3.0rem",
+        lineHeight: "60px",
       },
       "@media (max-width:600px)": {
         fontSize: "2rem",
+        lineHeight: "43px",
       },
     },
     h2: {
       fontFamily: `"Montserrat", Arial, Helvetica, sans-serif`,
-      fontSize: "1.5rem",
+      fontSize: "21px",
+      lineHeight: "34px",
       "@media (min-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: "21px",
         padding: "15px 50px",
+        lineHeight: "34px",
       },
       "@media (max-width:600px)": {
         fontSize: "0.9rem",
         padding: "15px 50px",
+        lineHeight: "34px",
       },
     },
     h3: {

@@ -33,7 +33,7 @@ const Banner = ({ social }) => {
         alignItems="center"
         style={{
           position: "absolute",
-          top: 0,
+          top: -10,
           width: "100%",
           left: 0,
           height: "70vh",

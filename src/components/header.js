@@ -104,7 +104,7 @@ const Header = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar elevation={0} position="static" color="primary">
+      <AppBar elevation={0} position="static" style={{ color: "transparent" }}>
         <Toolbar style={{ padding: 8 }}>
           <Grid container justify="flex-start">
             <Link style={{ color: "#000000", textDecoration: "none" }} to={`/`}>

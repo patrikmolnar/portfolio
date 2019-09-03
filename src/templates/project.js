@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import ProjectMarkdown from "../components/projectmarkdown"
 
 const Project = ({ pageContext }) => {
-  console.log(pageContext)
   return (
     <Layout pageContext={pageContext}>
       <SEO title={`${pageContext.project.title}`} />
