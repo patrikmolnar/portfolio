@@ -21,6 +21,11 @@ const useStyles = makeStyles(theme =>
     chip: {
       margin: theme.spacing(1),
     },
+    innerShadow: {
+      WebkitBoxShadow: "0px 0px 30px 0px #6d6b6b4a",
+      MozBoxShadow: "0px 0px 30px 0px #6d6b6b4a",
+      boxShadow: "0px 0px 30px 0px #6d6b6b4a",
+    },
   })
 )
 
@@ -37,7 +42,7 @@ const ProjectDetails = ({ project }) => {
             height="240"
             image={project.thumbnail.url}
             title={project.title}
-            className={classes.cardImage}
+            className={classes.innerShadow}
           />
           <CardContent>
             <div style={{ padding: "20px 20px 0px 20px" }}>
